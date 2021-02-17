@@ -34,5 +34,4 @@ class PlayerScraper < Parser
     end
     PlayersRating.new
   end
-
 end

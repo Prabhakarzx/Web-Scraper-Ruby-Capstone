@@ -65,5 +65,4 @@ class Main
       suggest_players(option)
     end
   end
-
 end
