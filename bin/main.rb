@@ -10,4 +10,17 @@ class Main
     @data_shelf = []
     welcome_interface
   end
+
+  private
+
+  def welcome_interface
+    divide(1)
+    divide(1)
+    puts "\n\t\t\t\t Welcome to Soccer Scraper \n\n"
+    divide(1)
+    divide(1)
+    puts "\n"
+    main_option
+  end
+
 end
