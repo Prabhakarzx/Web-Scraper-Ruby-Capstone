@@ -8,4 +8,4 @@ module ShowStatus
     num.times { print '||' }
     print " #{num * 5} % \n"
   end
-  end
+end
