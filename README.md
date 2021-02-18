@@ -16,16 +16,19 @@
 > The program creates a JSON file for all the stats for the user to use and saves locally in the doc folder of the application.
 > It uses https://fbref.com/ to scrap all the required data.
 
-## Sample Screenshot
+## Video Explainer
 
+https://www.loom.com/share/5fc74587faaf45feb549f2525a1a4be5
+
+## Sample Screenshot
 ### Scraping status and loading bar
-<img src="./media/readme1.png" width="60%" height="500" />
+<img src="./media/readme1.png" width="100%" height="500" />
 
 ### League table
 <img src="./media/readme2.png" width="100%" height="500" />
 
 ### Team menu
-<img src="./media/readme2.png" width="100%" height="500" />
+<img src="./media/readme3.png" width="100%" height="500" />
 
 ## Built With
 
