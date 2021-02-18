@@ -141,4 +141,46 @@ class Main
     team_option if option == 2
     abort_program(2) if option == 3
   end
+
+  def validate(range, input)
+    try = 4
+    while range.none?(input) && try.positive?
+      puts " Please choose a Number Between #{range} you have #{try} trials left".yellow
+      break if range.any?(input = gets.chomp.to_i)
+
+      try -= 1
+    end
+    input
+  end
+
+  def divide(num)
+    if num == 1
+      100.times { print '#'.black.on_cyan }
+    else
+      100.times { print '!'.black.on_red }
+    end
+    print "\n"
+  end
+
+  def loading_interface
+    puts "\n\nLoading . . . "
+    puts '!! Please maximize your Terminal window for a better experiance !!'.yellow
+    sleep(3)
+    clear_screen
+  end
+
+  def clear_screen
+    system 'cls'
+    system 'clear'
+  end
+
+  def abort_program(status)
+    if status == 1
+      abort 'Too many wrong inputs, Exiting . . .'.on_red
+    elsif status == 2
+      abort 'Thank you for using Scrap League, Exiting . . .'.on_red
+    end
+  end
 end
+
+Main.new
