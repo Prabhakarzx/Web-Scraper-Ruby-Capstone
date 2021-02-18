@@ -34,4 +34,26 @@ class PlayerScraper < Parser
     end
     PlayersRating.new
   end
+
+  def scrap_players(parsed_url, team_name)
+    table_rows_attack = parsed_url.at('tbody').css('tr')
+    table_rows_defence = parsed_url.css('tbody')[8].css('tr')
+    table_rows_gk = parsed_url.css('tbody')[2].css('tr')
+    players_outter_hash = {}
+    players_outter_hash[team_name] = {}
+    players_inner_hash = {}
+    table_rows_attack.length.times do |i|
+      inner_hash = players_inner_hash[table_rows_attack[i].css('th').text.strip] = {}
+      PLAYER_ATT_ATTRIB.length.times do |j|
+        inner_hash.merge!(PLAYER_ATT_ATTRIB[j] => text_cleaner(table_rows_attack[i].css('td')[j].text))
+      end
+      
+      players_outter_hash[team_name].merge!(players_inner_hash)
+    end
+    FileHandler.new(players_outter_hash, "#{@league}_Players").players_to_json
+  end
+
+  def text_cleaner(string)
+    string.gsub(/[[:lower:]]+/, '').strip
+  end
 end
