@@ -16,8 +16,6 @@
 > The program creates a JSON file for all the stats for the user to use and saves locally in the doc folder of the application.
 > It uses https://fbref.com/ to scrap all the required data.
 
-## Video Presentation
-
 ## Sample Screenshot
 
 ### Scraping status and loading bar
