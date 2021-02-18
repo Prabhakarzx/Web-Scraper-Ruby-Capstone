@@ -49,9 +49,9 @@ class InterfaceDataControl
     gk_hash = {}
     players.each do |_club, player|
       player.each do |player_name, attrib|
-        att_hash.merge!(player_name => attrib['Attacker_rating']) if attrib['Position'].include? 'FW'
-        mid_hash.merge!(player_name => attrib['Assists']) if attrib['Position'].include? 'MF'
-        def_hash.merge!(player_name => attrib['Defender_rating']) if attrib['Position'].include? 'DF'
+        att_hash[player_name] = attrib['Attacker_rating'] if attrib['Position'].include? 'FW'
+        mid_hash[player_name] = attrib['Assists'] if attrib['Position'].include? 'MF'
+        def_hash[player_name] = attrib['Defender_rating'] if attrib['Position'].include? 'DF'
         gk_hash.merge!(player_name => attrib['Goal_keeper_rating']) if attrib['Position'].include? 'GK'
       end
     end
