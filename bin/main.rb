@@ -132,8 +132,8 @@ class Main
   end
 
   def navigate
-    puts "\n\t 1.Change League \n"
-    puts "\n\t 2.Change Team option \n"
+    puts "\n\t 1.Change the League \n"
+    puts "\n\t 2.Show Team option \n"
     puts "\n\t 3.Exit \n".red
     option = validate((1..3), gets.chomp.to_i)
     clear_screen
@@ -145,7 +145,7 @@ class Main
   def validate(range, input)
     try = 4
     while range.none?(input) && try.positive?
-      puts " Please choose a Number Between #{range} you have #{try} trials left".yellow
+      puts " Please Choose a Number in the range of #{range}. You have #{try} trials left before the program exit.".yellow
       break if range.any?(input = gets.chomp.to_i)
 
       try -= 1
@@ -163,8 +163,8 @@ class Main
   end
 
   def loading_interface
-    puts "\n\nLoading . . . "
-    puts '!! Please maximize your Terminal window for a better experiance !!'.yellow
+    puts "\n\nLoading . . . ."
+    puts '!! Please Maximize the Terminal Window for a Better Viewing Experiance !!'.blue
     sleep(3)
     clear_screen
   end
@@ -176,9 +176,9 @@ class Main
 
   def abort_program(status)
     if status == 1
-      abort 'Too many wrong inputs, Exiting . . .'.on_red
+      abort 'You have crossed wrong input limit, Exiting . . .'.on_red
     elsif status == 2
-      abort 'Thank you for using Scrap League, Exiting . . .'.on_red
+      abort 'Thank you for using Soccer Scraper, Exiting . . .'.on_green
     end
   end
 end
