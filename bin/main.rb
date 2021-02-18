@@ -99,4 +99,46 @@ class Main
     puts table
     navigate
   end
+
+  def suggest_players(option)
+    best_palyers = @interface.suggest_best_xi
+    if option == 3
+      divide(1)
+      puts "ATTACKERS \n\n"
+      puts best_palyers[0]
+      puts "\n"
+      divide(1)
+      puts "MIDFIELDERS \n\n"
+      puts best_palyers[1]
+      puts "\n"
+      divide(1)
+      puts "DEFENDERS \n\n"
+      puts best_palyers[2]
+      puts "\n"
+      divide(1)
+      puts "GOALKEEPER \n\n"
+      puts best_palyers[3]
+
+    elsif option == 4
+      puts best_palyers[0][0]
+    elsif option == 5
+      puts best_palyers[1][0]
+    elsif option == 6
+      puts best_palyers[2][0]
+    elsif option == 7
+      puts best_palyers[3][0]
+    end
+    navigate
+  end
+
+  def navigate
+    puts "\n\t 1.Change League \n"
+    puts "\n\t 2.Change Team option \n"
+    puts "\n\t 3.Exit \n".red
+    option = validate((1..3), gets.chomp.to_i)
+    clear_screen
+    main_option if option == 1
+    team_option if option == 2
+    abort_program(2) if option == 3
+  end
 end
