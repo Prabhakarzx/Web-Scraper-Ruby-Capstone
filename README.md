@@ -19,16 +19,13 @@
 ## Sample Screenshot
 
 ### Scraping status and loading bar
-<img src="./media/readme1.JPG" width="60%" height="500" />
+<img src="./media/readme1.png" width="60%" height="500" />
 
 ### League table
-<img src="./media/readme2.JPG" width="100%" height="500" />
+<img src="./media/readme2.png" width="100%" height="500" />
 
 ### Team menu
-<img src="./media/readme2.JPG" width="100%" height="500" />
-
-### players table
-<img src="./media/readm3.JPG" width="100%" height="500" />
+<img src="./media/readme2.png" width="100%" height="500" />
 
 ## Built With
 
