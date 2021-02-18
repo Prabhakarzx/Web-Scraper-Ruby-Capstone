@@ -48,7 +48,7 @@ class Main
     puts "\n\t\t Select the desired data to display\n"
     puts "\n\t\t 1.League Table \n"
     puts "\n\t\t 2.Team Statistics \n"
-    puts "\n\t\t 3.Suggest Best XI \n"
+    puts "\n\t\t 3.Suggest Best Team \n"
     puts "\n\t\t 4.Best Forward \n"
     puts "\n\t\t 5.Best Midfielder \n"
     puts "\n\t\t 6.Best Defender \n"
