@@ -32,13 +32,13 @@ https://www.loom.com/share/5fc74587faaf45feb549f2525a1a4be5
 
 ## Built With
 
--[x] Ruby
--[x] Nokogiri gem
--[x] open-uri
--[x] colorize gem
--[x] json gem
--[x] terminal-table gem
--[x] VScode
+- [x] Ruby
+- [x] Nokogiri gem
+- [x] open-uri
+- [x] colorize gem
+- [x] json gem
+- [x] terminal-table gem
+- [x] VScode
 
 ## Project Structure
 
